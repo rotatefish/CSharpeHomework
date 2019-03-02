@@ -1,9 +1,0 @@
-E:\CSharpeHomework\homework1\problem5\problem5\bin\Release\problem5.exe.config
-E:\CSharpeHomework\homework1\problem5\problem5\bin\Release\problem5.exe
-E:\CSharpeHomework\homework1\problem5\problem5\bin\Release\problem5.pdb
-E:\CSharpeHomework\homework1\problem5\problem5\obj\Release\problem5.Form1.resources
-E:\CSharpeHomework\homework1\problem5\problem5\obj\Release\problem5.Properties.Resources.resources
-E:\CSharpeHomework\homework1\problem5\problem5\obj\Release\problem5.csproj.GenerateResource.cache
-E:\CSharpeHomework\homework1\problem5\problem5\obj\Release\problem5.csproj.CoreCompileInputs.cache
-E:\CSharpeHomework\homework1\problem5\problem5\obj\Release\problem5.exe
-E:\CSharpeHomework\homework1\problem5\problem5\obj\Release\problem5.pdb
