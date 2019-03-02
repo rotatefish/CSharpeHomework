@@ -1,7 +1,0 @@
-C:\Users\lcy\Desktop\problem4\problem4\bin\Debug\problem4.exe.config
-C:\Users\lcy\Desktop\problem4\problem4\bin\Debug\problem4.exe
-C:\Users\lcy\Desktop\problem4\problem4\bin\Debug\problem4.pdb
-C:\Users\lcy\Desktop\problem4\problem4\obj\Debug\problem4.csprojAssemblyReference.cache
-C:\Users\lcy\Desktop\problem4\problem4\obj\Debug\problem4.csproj.CoreCompileInputs.cache
-C:\Users\lcy\Desktop\problem4\problem4\obj\Debug\problem4.exe
-C:\Users\lcy\Desktop\problem4\problem4\obj\Debug\problem4.pdb
