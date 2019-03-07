@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumber", "PrimeNumber\PrimeNumber.csproj", "{8B6CC462-65C8-4E3B-9EE7-8C8D9F44C792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayCalc", "ArrayCalc\ArrayCalc.csproj", "{12642B67-4076-4A3A-8CF8-3F199CFD83DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetPrime", "GetPrime\GetPrime.csproj", "{FFDCFB70-50BC-4B31-A055-837721671434}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B6CC462-65C8-4E3B-9EE7-8C8D9F44C792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B6CC462-65C8-4E3B-9EE7-8C8D9F44C792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B6CC462-65C8-4E3B-9EE7-8C8D9F44C792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B6CC462-65C8-4E3B-9EE7-8C8D9F44C792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12642B67-4076-4A3A-8CF8-3F199CFD83DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12642B67-4076-4A3A-8CF8-3F199CFD83DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12642B67-4076-4A3A-8CF8-3F199CFD83DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12642B67-4076-4A3A-8CF8-3F199CFD83DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFDCFB70-50BC-4B31-A055-837721671434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFDCFB70-50BC-4B31-A055-837721671434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFDCFB70-50BC-4B31-A055-837721671434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFDCFB70-50BC-4B31-A055-837721671434}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6DB17C0-C814-42B3-86BC-61F826F355EF}
+	EndGlobalSection
+EndGlobal
