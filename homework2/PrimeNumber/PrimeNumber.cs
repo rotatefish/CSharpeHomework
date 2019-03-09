@@ -6,29 +6,38 @@ using System.Threading.Tasks;
 
 namespace PrimeNumber
 {
-	class PrimeNumber
-	{
-		static void Main(string[] args)
-		{
-			Console.WriteLine("输入一个数字:");
-			int num = int.Parse(Console.ReadLine());
-			int tmp = num;
+	class PrimeNumber {
+		private static List<int> primeFactor(int num) {
+			List<int> ans = new List<int>();
 			int k = 2;
-			Console.WriteLine("素数因子: ");
-			while (tmp > 0)
-			{
-				if (tmp < k) break;
-				if (tmp % k == 0)
-				{
-					Console.Write(k + " ");
-					while (tmp > 0 && tmp % k == 0) tmp /= k;
+			while (num > 0) {
+				if (num < k) break;
+				if (num % k == 0) {
+					ans.Add(k);
+					num /= k;
 				}
-				else
-				{
+				else {
 					++k;
 				}
 			}
-			Console.ReadLine();
+			return ans;
+		}
+		static void Main(string[] args) {
+			Console.WriteLine("输入一个数字:");
+			int num;
+			try {
+				num = int.Parse(Console.ReadLine());
+			}
+			catch (Exception e) {
+	
+				Console.WriteLine(e.Message);
+				return;
+			}
+			List<int> ans = primeFactor(num);
+			Console.WriteLine("素数因子:");
+			foreach(int fac in ans) {
+				Console.Write(fac + " ");
+			}
 		}
 	}
 }
