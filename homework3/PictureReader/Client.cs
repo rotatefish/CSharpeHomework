@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//工厂模式
 namespace PictureReader {
 	class Client {
 		static void Main(string[] args) {

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C0C4E4EA-01C4-4A42-AAF4-E5284693DE34}</ProjectGuid>
+    <ProjectGuid>{AB95A6F2-A2AC-4A7D-9419-7143BA96EB62}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PictureReader</RootNamespace>
-    <AssemblyName>PictureReader</AssemblyName>
+    <RootNamespace>WeChat</RootNamespace>
+    <AssemblyName>WeChat</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,15 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
-    <Compile Include="GifPicture.cs" />
-    <Compile Include="GifPictureReader.cs" />
-    <Compile Include="JpgPicture.cs" />
-    <Compile Include="JpgPictureReader.cs" />
-    <Compile Include="Picture.cs" />
-    <Compile Include="PictureReader.cs" />
-    <Compile Include="PngPicture.cs" />
-    <Compile Include="PngPictureReader.cs" />
+    <Compile Include="Observer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicAcc.cs" />
+    <Compile Include="Subject.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
