@@ -17,21 +17,8 @@ namespace OrderManage {
 			Quantity = quantity;
 		}
 
-		public override bool Equals(object obj) {
-			if (obj is OrderDetails) {
-				OrderDetails od = (OrderDetails)obj;
-				if (od.Product.Equals(Product) && od.Quantity == Quantity)
-					return true;
-			}
-			return false;
-		}
-
 		public override string ToString() {
 			return Product + $", Quantity:{Quantity}";
-		}
-
-		public override int GetHashCode() {
-			return Product.GetHashCode() * 10000 + Quantity;
 		}
 	}
 }

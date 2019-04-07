@@ -13,16 +13,7 @@ namespace OrderManage {
 			ID = id;
 			Name = name;
 		}
-		public override bool Equals(object obj) {
-			if (obj is Customer) {
-				Customer other = (Customer)obj;
-				if (other.Name == Name) return true;
-			}
-			return false;
-		}
-		public override int GetHashCode() {
-			return ID;
-		}
+
 		public override string ToString() {
 			return "CustomerID:" + ID + ",CustomerName:" + Name;
 		}

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace OrderManage {
-	public class Order : IComparable {
+	public class Order {
 
 		public List<OrderDetails> details;
 		
@@ -38,21 +38,5 @@ namespace OrderManage {
 			return result;
 		}
 
-		public int CompareTo(object obj) {
-			Order other = (Order)obj;
-			return other.ID - ID;
-		}
-
-		public override bool Equals(object obj) {
-			if (obj is Order) {
-				Order o = (Order)obj;
-				if (o.ID == ID) return true;
-			}
-			return false;
-		}
-
-		public override int GetHashCode() {
-			return ID;
-		}
 	}
 }
