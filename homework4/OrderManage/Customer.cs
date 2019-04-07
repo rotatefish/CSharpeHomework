@@ -8,12 +8,10 @@ namespace OrderManage {
 	public class Customer {
 		public int ID { get; set; }
 		public string Name { get; set; }
-		public string Sex { get; set; }
 
-		public Customer(int id, string name, string sex) {
+		public Customer(int id, string name) {
 			ID = id;
 			Name = name;
-			Sex = sex;
 		}
 		public override bool Equals(object obj) {
 			if (obj is Customer) {
@@ -26,7 +24,7 @@ namespace OrderManage {
 			return ID;
 		}
 		public override string ToString() {
-			return "CustomerID:" + ID + ",CustomerName:" + Name + ",CustomerSex:" + Sex;
+			return "CustomerID:" + ID + ",CustomerName:" + Name;
 		}
 	}
 }

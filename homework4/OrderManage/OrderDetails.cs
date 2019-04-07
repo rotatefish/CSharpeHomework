@@ -26,6 +26,10 @@ namespace OrderManage {
 			return false;
 		}
 
+		public override string ToString() {
+			return Product + $", Quantity:{Quantity}";
+		}
+
 		public override int GetHashCode() {
 			return Product.GetHashCode() * 10000 + Quantity;
 		}

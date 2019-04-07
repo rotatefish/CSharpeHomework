@@ -24,7 +24,7 @@ namespace OrderManage {
 				throw new Exception("This order already exists!!!");
 			} else {
 				orderList.Add(order);
-				Console.WriteLine("Successfully add this order!");
+				Console.WriteLine($"Successfully add order{order.ID}!");
 			}
 		}
 		/// <summary>
@@ -53,7 +53,7 @@ namespace OrderManage {
 		}
 
 		public Order GetByID(int id) {
-			Console.WriteLine("GetByID");
+			
 			foreach (Order obj in orderList) {
 				if (obj.ID == id) return obj;
 			}
@@ -81,10 +81,10 @@ namespace OrderManage {
 			}
 			return result;
 		}
-		public List<Order> QueryByCustomer(Customer buyer) {
+		public List<Order> QueryByCustomer(string name) {
 			List<Order> result = new List<Order>();
 			foreach (Order obj in orderList) {
-				if (obj.Buyer.Equals(buyer)) result.Add(obj);
+				if (obj.Customer.Name == name) result.Add(obj);
 			}
 			return result;
 		}

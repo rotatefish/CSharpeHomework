@@ -18,7 +18,7 @@ namespace OrderManage {
 		}
 
 		public override string ToString() {
-			return "ID:" + ID + ",Name:" + Name + ",Price:" + Price;
+			return "GoodsID:" + ID + ", GoodsName:" + Name + ", Price:" + Price;
 		}
 	}
 }
