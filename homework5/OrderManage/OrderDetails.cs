@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OrderManage {
 	//订单明细
-	public class OrderDetails {
+	public class OrderDetails : IComparable {
 		//商品
 		public Goods Product { get; set; }
 		//数量
@@ -15,7 +15,10 @@ namespace OrderManage {
 		public OrderDetails(Goods product, int quantity) {
 			Product = product;
 			Quantity = quantity;
-			
+		}
+
+		public double TotalAmount() {
+			return Product.Price * Quantity;
 		}
 
 		public override string ToString() {
@@ -34,6 +37,12 @@ namespace OrderManage {
 			hashCode = hashCode * - 1521134295 + Product.GetHashCode();
 			hashCode = hashCode * - 1521134295 + Quantity.GetHashCode();
 			return hashCode;
+		}
+
+		public int CompareTo(object obj) {
+			var detail = obj as OrderDetails;
+			if (detail == null) return 0;
+			return Quantity - detail.Quantity;
 		}
 	}
 }

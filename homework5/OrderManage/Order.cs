@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace OrderManage {
-	public class Order {
+	public class Order : IComparable {
 
 		public List<OrderDetails> details;
 		
@@ -16,6 +16,7 @@ namespace OrderManage {
 		public Order() {
 			details = new List<OrderDetails>();
 		}
+
 		public Order(int id, Customer customer, DateTime date) {
 			ID = id;
 			Customer = customer;
@@ -23,6 +24,15 @@ namespace OrderManage {
 			details = new List<OrderDetails>();
 		}
 
+		public void SortDetails() {
+			details.Sort();
+		}
+
+		public double TotalAmount() {
+			double result = 0;
+			details.ForEach(detail => result += detail.TotalAmount());
+			return result;
+		}
 		public void AddDetails(OrderDetails orderDetail) {
 			if (details.Contains(orderDetail)) {
 				throw new Exception($"The orderDetail is already existed!");
@@ -46,6 +56,12 @@ namespace OrderManage {
 
 		public override int GetHashCode() {
 			return 1213502048 + ID.GetHashCode();
+		}
+
+		public int CompareTo(object obj) {
+			var order = obj as Order;
+			if (order == null) return 0;
+			return ID - order.ID;
 		}
 	}
 }

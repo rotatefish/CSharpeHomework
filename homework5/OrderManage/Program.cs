@@ -13,31 +13,41 @@ namespace OrderManage {
 
 				Customer customer1 = new Customer(1, "kyh");
 				Customer customer2 = new Customer(2, "qdl");
+				Customer customer3 = new Customer(3, "cq");
 
-				Goods milk = new Goods(1, "Milk", 23.49);
+				Goods milk = new Goods(1, "Milk", 4.49);
 				Goods eggs = new Goods(2, "eggs", 3.99);
-				Goods banana = new Goods(3, "banana", 7.59);
+				Goods banana = new Goods(3, "banana", 5.59);
 
 				OrderDetails orderDetails1 = new OrderDetails(banana, 2);
 				OrderDetails orderDetails2 = new OrderDetails(eggs, 3);
 				OrderDetails orderDetails3 = new OrderDetails(milk, 4);
-				OrderDetails orderDetails4 = new OrderDetails(milk, 4);
 
 				Order order1 = new Order(1, customer1, date);
 				Order order2 = new Order(2, customer2, date);
+				Order order3 = new Order(3, customer3, date);
 
+				order1.AddDetails(new OrderDetails(milk, 20));
 				order1.AddDetails(orderDetails1);
 				order1.AddDetails(orderDetails2);
-				order1.AddDetails(new OrderDetails(milk, 10));
 
+				order2.AddDetails(new OrderDetails(eggs, 30));
 				order2.AddDetails(orderDetails1);
 				order2.AddDetails(orderDetails3);
-				order2.AddDetails(new OrderDetails(eggs, 30));
 
-
+				order3.AddDetails(new OrderDetails(banana, 25));
+				order3.AddDetails(orderDetails2);
+				order3.AddDetails(orderDetails3);
+				
+				order1.SortDetails();
+				order2.SortDetails();
+				order3.SortDetails();
 				OrderService os = new OrderService();
-				os.AddOrder(order1);
+
 				os.AddOrder(order2);
+				os.AddOrder(order1);
+				os.AddOrder(order3);
+				os.SortOrders();
 				
 				Console.WriteLine("\n");
 

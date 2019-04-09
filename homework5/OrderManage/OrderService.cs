@@ -52,6 +52,16 @@ namespace OrderManage {
 			}
 		}
 
+		public void SortOrders() {
+			//Lambda表达式按ID递增排序
+			//orderList.Sort((x, y)=>x.ID.CompareTo(y.ID));
+
+			//Lambda表达式按订单总额递增排序
+			orderList.Sort((x, y) => x.TotalAmount().CompareTo(y.TotalAmount()));
+
+			//实现IComparable接口排序
+			//orderList.Sort();
+		}
 		public Order GetByID(int id) {
 			
 			foreach (Order obj in orderList) {
