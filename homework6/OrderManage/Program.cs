@@ -8,7 +8,11 @@ namespace OrderManage {
 
 	class Program {
 		static void Main(string[] args) {
+			
 			try {
+				OrderService os = new OrderService();
+				os.Import("data.txt");
+				/*
 				DateTime date = DateTime.Now;
 				Console.WriteLine();
 
@@ -43,13 +47,17 @@ namespace OrderManage {
 				order1.SortDetails();
 				order2.SortDetails();
 				order3.SortDetails();
-				OrderService os = new OrderService();
+				
 
 				os.AddOrder(order2);
 				os.AddOrder(order1);
 				os.AddOrder(order3);
-				os.SortOrders();
+				*/
 
+				//os.Export("data.txt");
+				os.SortOrders();
+				Console.WriteLine(os.orderList.Count());
+				
 				Console.WriteLine("\n");
 
 				Console.WriteLine("查询所有订单");
@@ -76,16 +84,10 @@ namespace OrderManage {
 				Console.WriteLine("删除订单编号为2和4的订单");
 				os.RemoveByID(2);
 				os.RemoveByID(4);
-
-				os.Export("data.xml");
+				
 			}
 			catch (Exception e) {
-				string msg = "处理失败，失败原因:\r\n" + e.Message;
-
-				if (e.InnerException != null) {
-					msg += "\r\n具体原因：\r\n" + e.InnerException.Message;
-				}
-				Console.WriteLine(msg);
+				Console.WriteLine(e.Message);
 			}
 			
 		}

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace OrderManage {
+	// 商品类
+	[Serializable]
 	public class Goods {
 
 		public int ID { get; set; }

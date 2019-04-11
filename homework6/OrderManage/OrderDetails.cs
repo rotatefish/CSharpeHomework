@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace OrderManage {
-	//订单明细
+	// 订单明细类
 	[Serializable]
-
 	public class OrderDetails : IComparable {
 		//商品
 		public Goods Product { get; set; }

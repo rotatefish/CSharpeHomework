@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace OrderManage {
+	// 顾客类
+	[Serializable]
 	public class Customer {
 		public int ID { get; set; }
 		public string Name { get; set; }
-
+		
 		public Customer() {
 
 		}

@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace OrderManage {
+	// 订单类
 	[Serializable]
 	public class Order : IComparable {
+
 		public List<OrderDetails> details;
-		
 		public int ID { get; set; }
 		public Customer Buyer { get; set; }
 		public DateTime Date { get; set; }
-		public List<OrderDetails> Details {
-			get => this.details;
-		}
 
 		public Order() {
 			details = new List<OrderDetails>();
